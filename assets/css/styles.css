@@ -294,13 +294,26 @@
     color:var(--muted-cream);
     max-width:560px;
   }
+  .hero p.sub .sub-line1{
+    display:block;
+    font-weight:800;
+    font-size:1.58rem;
+    color:var(--cream-text);
+  }
+  .hero p.sub .sub-line2{
+    display:block;
+    font-size:1.4375rem;
+    margin-top:10px;
+  }
   @media(max-width:900px){ .hero p.sub{margin-inline:auto;} }
   .hero .btn-cta{margin-top:38px;}
 
   /* ---- Hero mobile-only sizing (2-line title / 2-line subtitle) ---- */
   @media(max-width:480px){
     .hero h1{font-size:1.5rem !important; line-height:1.32 !important;}
-    .hero p.sub{font-size:0.92rem !important; line-height:1.45 !important; max-width:300px !important;}
+    .hero p.sub{line-height:1.45 !important; max-width:300px !important;}
+    .hero p.sub .sub-line1{font-size:1.01rem !important;}
+    .hero p.sub .sub-line2{font-size:0.92rem !important;}
     .hero .reveal[style*="max-width:240px"]{max-width:170px !important;}
   }
 
@@ -1252,4 +1265,67 @@
     background:linear-gradient(135deg, var(--rose-600), var(--gold-600)); color:#fff8ef;
     font-family:'Frank Ruhl Libre',serif; font-weight:700; display:flex;align-items:center;justify-content:center;
     font-size:0.95rem; box-shadow:0 8px 18px -4px rgba(166,65,91,0.5);
+  }
+
+  /* =================== SITE-WIDE MOBILE POLISH (<=480px) =================== */
+  @media(max-width:480px){
+    .container{padding:0 16px;}
+    section{padding:56px 0;}
+
+    /* checklist */
+    .checklist li{font-size:0.98rem; gap:14px;}
+    .checklist ul{gap:22px; margin-top:32px;}
+    .radio-ico{width:20px; height:20px;}
+
+    /* timeline */
+    .thread-item{padding-right:64px; margin-bottom:24px;}
+    .thread-node{width:38px; height:38px;}
+    .thread-node svg{width:19px; height:19px;}
+    .thread-item p{font-size:0.98rem;}
+    .callout-dark{padding:32px 24px; margin-top:40px;}
+    .callout-dark h3{font-size:1.2rem;}
+    .callout-dark p{font-size:0.95rem;}
+
+    /* problem/solution flow */
+    .ps-flow{gap:14px;}
+    .ps-flow .ps-card{padding:26px 22px;}
+    .ps-flow .ps-card h4{font-size:1.02rem;}
+    .ps-flow .ps-card p{font-size:0.9rem;}
+
+    /* invitation / conditions */
+    .invitation-card{padding:30px 24px; margin-top:32px;}
+    .cond-row{font-size:0.95rem; padding:13px 0; gap:12px;}
+    .cond-check{width:24px; height:24px;}
+
+    /* plans comparison table */
+    .plans-section p{font-size:0.95rem !important;}
+    .compare-wrap{margin-top:30px;}
+
+    /* form card */
+    .form-card{padding:34px 26px; margin-top:32px;}
+    .form-card h3{font-size:1.25rem;}
+    .field{padding:14px 16px; margin-top:14px;}
+
+    /* who it's not for */
+    .notfor-row{padding:18px 20px; gap:14px;}
+    .notfor-row p{font-size:0.92rem;}
+    .x-ico{width:26px; height:26px;}
+
+    /* faq */
+    .faq-question{padding:18px 20px; font-size:0.95rem;}
+    .faq-answer p{padding:0 20px 20px; font-size:0.92rem;}
+
+    /* social icons */
+    .social-links{gap:14px; margin-top:36px;}
+    .social-ico{width:40px; height:40px;}
+    .social-ico svg{width:19px; height:19px;}
+
+    /* video */
+    .video-caption{font-size:1.1rem !important; margin-bottom:16px;}
+    .video-placeholder{margin:14px auto 44px;}
+
+    /* story */
+    .story-pull-quote{margin:44px auto; font-size:1.15rem !important; padding:0 8px;}
+    .story-block{margin-bottom:50px;}
+    .story-block p{font-size:0.95rem;}
   }
