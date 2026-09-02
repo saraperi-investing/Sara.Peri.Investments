@@ -313,12 +313,14 @@
 
   /* ---- Hero mobile-only sizing (2-line title / 2-line subtitle) ---- */
   @media(max-width:480px){
+    .hero{padding-top:41px !important;}
     .hero h1{font-size:1.5rem !important; line-height:1.32 !important;}
     .hero p.sub{line-height:1.25 !important; max-width:300px !important;}
     .hero p.sub .sub-line1{font-size:1.01rem !important; line-height:1.2 !important;}
     .hero p.sub .sub-line2{font-size:0.92rem !important; line-height:1.25 !important; margin-top:4px !important;}
     .hero .reveal[style*="max-width:240px"]{max-width:170px !important;}
-    .hero .btn-cta{padding:16px 26px !important;}
+    .hero .btn-cta{padding:16px 26px !important; margin-top:13px !important;}
+    .hero .video-placeholder{margin-top:22px !important;}
   }
 
   /* =================== TESTIMONIAL CARDS =================== */
