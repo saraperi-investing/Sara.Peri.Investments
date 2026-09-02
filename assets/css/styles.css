@@ -311,7 +311,6 @@
   .hero .btn-cta{margin-top:19px; padding:19px 32px;}
   .hero .video-placeholder{margin-top:44px;}
 
-
   /* ---- Hero mobile-only sizing (2-line title / 2-line subtitle) ---- */
   @media(max-width:480px){
     .hero h1{font-size:1.5rem !important; line-height:1.32 !important;}
@@ -1018,10 +1017,10 @@
   }
 
   /* ---- elevated story ---- */
-  .story-elevated{position:relative;}
+  .story-elevated{position:relative; padding-top:56px;}
   .drop-cap::first-letter{
     font-family:'Frank Ruhl Libre',serif; font-size:3.4rem; font-weight:700; color:var(--gold-300);
-    float:right; line-height:0.75; padding-top:6px;
+    float:right; line-height:0.75; margin-left:12px; padding-top:6px;
   }
   .flourish{width:120px; height:24px; margin:0 auto 30px; opacity:0.65;}
 
@@ -1049,6 +1048,7 @@
     position:relative;
     padding:0 20px;
   }
+  .story-elevated .container > .story-pull-quote:first-child{margin-top:0;}
   .story-pull-quote::before, .story-pull-quote::after{
     content:"\201D";
     font-family:'Rubik',sans-serif;
@@ -1331,6 +1331,8 @@
 
     /* story */
     .story-pull-quote{margin:44px auto; font-size:1.15rem !important; padding:0 8px;}
+    .story-elevated .container > .story-pull-quote:first-child{margin-top:0 !important;}
+    .story-elevated{padding-top:32px;}
     .story-block{margin-bottom:50px;}
     .story-block p{font-size:0.95rem;}
   }
