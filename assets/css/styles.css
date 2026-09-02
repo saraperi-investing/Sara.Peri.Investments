@@ -312,14 +312,27 @@
   .hero-mini-title{
     margin-top:46px;
     font-family:'Rubik',sans-serif;
-    font-weight:700;
-    font-size:1.15rem;
-    color:var(--gold-300);
-    max-width:520px;
+    max-width:560px;
     margin-inline:auto;
   }
+  .hero-mini-title .mini-line1{
+    display:block;
+    font-weight:800;
+    font-size:1.75rem;
+    line-height:1.25;
+    color:var(--cream-text);
+  }
+  .hero-mini-title .mini-line2{
+    display:block;
+    font-weight:600;
+    font-size:1.08rem;
+    color:var(--gold-300);
+    margin-top:8px;
+  }
   @media(max-width:480px){
-    .hero-mini-title{margin-top:32px; font-size:0.98rem;}
+    .hero-mini-title{margin-top:32px;}
+    .hero-mini-title .mini-line1{font-size:1.28rem;}
+    .hero-mini-title .mini-line2{font-size:0.92rem; margin-top:6px;}
   }
 
   /* ---- Hero mobile-only sizing (2-line title / 2-line subtitle) ---- */
