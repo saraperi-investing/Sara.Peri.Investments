@@ -317,9 +317,9 @@
     .hero h1{font-size:1.62rem !important; line-height:1.26 !important;}
     .hero p.sub{line-height:1.2 !important; max-width:320px !important;}
     .hero p.sub .sub-line1{font-size:1.16rem !important; line-height:1.15 !important;}
-    .hero p.sub .sub-line2{font-size:1.02rem !important; line-height:1.2 !important; margin-top:4px !important;}
+    .hero p.sub .sub-line2{font-size:1.33rem !important; line-height:1.2 !important; margin-top:4px !important;}
     .hero .reveal[style*="max-width:240px"]{max-width:160px !important;}
-    .hero .btn-cta{padding:16px 26px !important; margin-top:12px !important;}
+    .hero .btn-cta{padding:16px 26px !important; margin-top:0px !important;}
     .hero .video-placeholder{margin-top:20px !important;}
   }
 
