@@ -198,3 +198,84 @@
 
     update();
   })();
+
+  /* ---- accessibility widget ---- */
+  (function(){
+    var toggle = document.getElementById('a11y-toggle');
+    var panel = document.getElementById('a11y-panel');
+    var closeBtn = document.getElementById('a11y-close');
+    var resetBtn = document.getElementById('a11y-reset');
+    if(!toggle || !panel) return;
+
+    var STORAGE_KEY = 'a11yPrefs';
+    var state = {fontsize:'n', contrast:false, grayscale:false, links:false, stopAnim:false};
+
+    function loadState(){
+      try{
+        var saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        if(saved) state = Object.assign(state, saved);
+      }catch(e){}
+    }
+    function saveState(){
+      try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+    }
+
+    function applyState(){
+      var html = document.documentElement;
+      html.classList.remove('a11y-fs-l','a11y-fs-xl');
+      if(state.fontsize === 'l') html.classList.add('a11y-fs-l');
+      if(state.fontsize === 'xl') html.classList.add('a11y-fs-xl');
+
+      html.classList.toggle('a11y-links', !!state.links);
+      html.classList.toggle('a11y-stop-anim', !!state.stopAnim);
+
+      var filters = [];
+      if(state.contrast) filters.push('contrast(1.35) saturate(1.15)');
+      if(state.grayscale) filters.push('grayscale(1)');
+      html.style.filter = filters.join(' ');
+
+      document.querySelectorAll('.a11y-row.a11y-fontsize button').forEach(function(b){
+        b.classList.toggle('active', b.dataset.fontsize === state.fontsize);
+      });
+      document.querySelectorAll('.a11y-toggle-btn').forEach(function(b){
+        var key = b.dataset.toggle === 'contrast' ? 'contrast'
+          : b.dataset.toggle === 'grayscale' ? 'grayscale'
+          : b.dataset.toggle === 'links' ? 'links'
+          : b.dataset.toggle === 'stop-anim' ? 'stopAnim' : null;
+        if(key) b.classList.toggle('active', !!state[key]);
+      });
+    }
+
+    function openPanel(){ panel.hidden = false; toggle.setAttribute('aria-expanded','true'); }
+    function closePanel(){ panel.hidden = true; toggle.setAttribute('aria-expanded','false'); }
+
+    toggle.addEventListener('click', function(){
+      panel.hidden ? openPanel() : closePanel();
+    });
+    if(closeBtn) closeBtn.addEventListener('click', closePanel);
+    document.addEventListener('click', function(e){
+      if(!panel.hidden && !panel.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)){
+        closePanel();
+      }
+    });
+
+    document.querySelectorAll('.a11y-row.a11y-fontsize button').forEach(function(b){
+      b.addEventListener('click', function(){ state.fontsize = b.dataset.fontsize; saveState(); applyState(); });
+    });
+    document.querySelectorAll('.a11y-toggle-btn').forEach(function(b){
+      b.addEventListener('click', function(){
+        var key = b.dataset.toggle === 'contrast' ? 'contrast'
+          : b.dataset.toggle === 'grayscale' ? 'grayscale'
+          : b.dataset.toggle === 'links' ? 'links'
+          : b.dataset.toggle === 'stop-anim' ? 'stopAnim' : null;
+        if(key){ state[key] = !state[key]; saveState(); applyState(); }
+      });
+    });
+    if(resetBtn) resetBtn.addEventListener('click', function(){
+      state = {fontsize:'n', contrast:false, grayscale:false, links:false, stopAnim:false};
+      saveState(); applyState();
+    });
+
+    loadState();
+    applyState();
+  })();
