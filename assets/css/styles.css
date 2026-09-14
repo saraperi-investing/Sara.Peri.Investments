@@ -23,7 +23,7 @@
 
   *{margin:0;padding:0;box-sizing:border-box;}
 
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth; overflow-x:hidden; width:100%;}
 
   body{
     font-family:'Assistant',sans-serif;
@@ -389,6 +389,8 @@
     .container{padding:0 14px;}
     .t-body{padding:16px 14px 12px; text-align:center;}
     .t-body p{font-size:0.82rem; line-height:1.4;}
+    .t-nav-prev{right:4px !important;}
+    .t-nav-next{left:4px !important;}
   }
 
   .t-card{
