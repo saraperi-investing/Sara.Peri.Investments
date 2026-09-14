@@ -21,6 +21,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<!-- ============ ACCESSIBILITY WIDGET ============ -->
+<div id="a11y-widget">
+  <button id="a11y-toggle" aria-label="תפריט נגישות" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="4" r="2"/><path d="M12 7c-1.1 0-2 .9-2 2v3.5L6.5 14 8 16l3.2-2 .8 1v6h2v-6.2l1.5.9 1.7 2.6 1.7-1-2-3.1-3.2-1.9V9c0-1.1-.9-2-2-2z"/></svg>
+  </button>
+  <div id="a11y-panel" role="dialog" aria-label="אפשרויות נגישות" hidden>
+    <div class="a11y-panel-header">
+      <span>נגישות</span>
+      <button id="a11y-close" aria-label="סגור">✕</button>
+    </div>
+    <div class="a11y-section-label">גודל טקסט</div>
+    <div class="a11y-row a11y-fontsize">
+      <button data-fontsize="xl">ענק</button>
+      <button data-fontsize="l">גדול</button>
+      <button data-fontsize="n" class="active">רגיל</button>
+    </div>
+    <button class="a11y-toggle-btn" data-toggle="contrast">ניגודיות גבוהה</button>
+    <button class="a11y-toggle-btn" data-toggle="grayscale">שחור לבן</button>
+    <button class="a11y-toggle-btn" data-toggle="links">הדגשת קישורים</button>
+    <button class="a11y-toggle-btn" data-toggle="stop-anim">עצירת אנימציות</button>
+    <div class="a11y-footer-row">
+      <button id="a11y-reset">איפוס</button>
+      <a href="accessibility.html" class="a11y-more-btn">לפרטים נוספים <span aria-hidden="true">👇</span></a>
+    </div>
+  </div>
+</div>
+
 <div class="grain"></div>
 
 <!-- ============ HERO ============ -->
@@ -321,10 +348,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="compare-cell">הצטרפות לקבוצת ווצאפ לשאלות, תמיכה וסביבה נשית מעצימה</div>
         <div class="compare-cell premium">הצטרפות לקבוצת ווצאפ לשאלות, תמיכה וסביבה נשית מעצימה</div>
       </div>
-      <div class="compare-row">
-        <div class="compare-cell">מענה לשאלות בוואטסאפ לאורך תקופת ההכשרה</div>
-        <div class="compare-cell premium">מענה לשאלות בוואטסאפ לאורך תקופת ההכשרה</div>
-      </div>
 
       <!-- Premium-only features -->
       <div class="compare-row">
@@ -457,7 +480,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<footer>© כל הזכויות שמורות</footer>
+<footer>
+  <p style="margin-bottom:8px;">פיננסית | עוסק מורשה 325064491 | בעלי התוספות, אלעד | טל׳ 0553186357 | <a href="mailto:SR0533186@Gmail.com" style="color:inherit;">SR0533186@Gmail.com</a></p>
+  <p style="margin-bottom:8px;"><a href="accessibility.html" style="color:inherit; text-decoration:underline;">הצהרת נגישות</a></p>
+  © כל הזכויות שמורות
+</footer>
 
 <script src="assets/js/script.js"></script>
 
