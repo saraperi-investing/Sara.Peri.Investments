@@ -682,7 +682,7 @@
   }
   .field::placeholder{color:#b3a290;}
   .field:focus{outline:none; border-color:var(--rose-500); box-shadow:0 0 0 4px rgba(166,65,91,0.12);}
-  .form-card .btn-cta{width:100%; text-align:center; margin-top:22px; padding:28px 46px;}
+  .form-card .btn-cta{width:100%; text-align:center; padding:28px 46px;}
 
   /* =================== NOT FOR =================== */
   .notfor-list{margin-top:48px; display:flex; flex-direction:column; gap:20px;}
