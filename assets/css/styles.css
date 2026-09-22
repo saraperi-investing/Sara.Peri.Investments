@@ -659,10 +659,10 @@
   /* =================== FORM =================== */
   .form-card{
     max-width:520px;
-    margin:50px auto 0;
+    margin:28px auto 0;
     background:linear-gradient(160deg,#ffffff, var(--champagne-100));
     border-radius:26px;
-    padding:50px 44px;
+    padding:36px 44px;
     box-shadow:0 34px 70px -20px rgba(42,10,19,0.22), 0 0 0 1px rgba(193,159,86,0.18);
     overflow:hidden;
   }
@@ -682,7 +682,7 @@
   }
   .field::placeholder{color:#b3a290;}
   .field:focus{outline:none; border-color:var(--rose-500); box-shadow:0 0 0 4px rgba(166,65,91,0.12);}
-  .form-card .btn-cta{width:100%; text-align:center; margin-top:26px;}
+  .form-card .btn-cta{width:100%; text-align:center; margin-top:22px; padding:28px 46px;}
 
   /* =================== NOT FOR =================== */
   .notfor-list{margin-top:48px; display:flex; flex-direction:column; gap:20px;}
@@ -1311,7 +1311,7 @@
     .compare-wrap{margin-top:30px;}
 
     /* form card */
-    .form-card{padding:34px 26px; margin-top:32px;}
+    .form-card{padding:26px 24px; margin-top:20px;}
     .form-card h3{font-size:1.3rem;}
     .field{padding:14px 16px; margin-top:14px;}
 
